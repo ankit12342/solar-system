@@ -4,15 +4,44 @@
     box-sizing: border-box;
 }
 
+body{
+    overflow: hidden;
+    background-color: #000000;
+    height: 100vh;
+}
 .container{
     height: 100vh;
-    background-color: black;
+    /* width: 100vw; */
+    color: white;
     position: relative;
+    padding: 10px;
+    font-family: sans-serif;
 }
 
+h1{
+    text-align: center;
+    color:#f1f743f4 ;
+    margin-bottom: 20px;
+
+}
+
+.solar-system{
+    position: relative;
+    width: 600px;
+    height: 600px;
+    margin: auto;
+
+    transform: scale(1);
+    transform-origin: center center;
+}
+
+
+
+
+
 .sun{
-    height: 80px;
-    width: 80px;
+    height: 60px;
+    width: 60px;
     background-color: yellow;
     border-radius: 50%;
     position: absolute;
@@ -22,12 +51,21 @@
     box-shadow: 0px 0px 10px 3px orange;
 
 }
-.mercury-outline,.venus-outline,.earth-outline,.mars-outline,.jupitar-outline,.saturn-outline,.uranus-outline{
-    height: 130px;
-    width: 130px;
+.sun-label{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-weight: bold;
+    font-size: 14px;
+    color: black;
+}
+.mercury-outline,.venus-outline,.earth-outline,.mars-outline,.jupitar-outline,.saturn-outline,.uranus-outline,.neptune-outline{
+    height: 100px;
+    width: 100px;
     border: solid 2px rgba(255, 255, 255, 0.144);
     border-radius: 50%;
-    position: fixed;
+    position: absolute;
     top: 50%;
     left: 50%;
     display: flex;
@@ -37,8 +75,8 @@
 }
 
 .mercury{
-    height: 20px;
-    width: 20px;
+    height: 15px;
+    width: 15px;
     background-color: mediumorchid;
     box-shadow: 0px 0px 10px 3px mediumorchid;
     border-radius: 50%;
@@ -47,134 +85,161 @@
 
 @keyframes mercury {
     from{
-        transform: rotate(0deg) translateX(65px) rotate(0deg);
+        transform: rotate(0deg) translateX(48px) rotate(0deg);
     }
     to{
-        transform: rotate(360deg) translate(65px) rotate(-360deg);
+        transform: rotate(360deg) translate(48px) rotate(-360deg);
     }
+}
+.mercury-label,.venus-label,.earth-label,.mars-label,.jupitar-label,.saturn-label,.uranus-label,.neptune-label{
+    position: absolute;
+    left: 16px;
+    top: -4px;
+    font-size: 10px;
 }
 
 .venus-outline{
-    height: 200px;
-    width: 200px;
+    height: 150px;
+    width: 150px;
 }
 .venus{
-    height: 30px;
-    width: 30px;
+    height: 20px;
+    width: 20px;
     background-color: rgb(211, 85, 144);
     box-shadow: 0px 0px 10px 3px rgb(211, 85, 144) ;
     animation: venus 5s linear infinite;
     border-radius: 50%;
 }
+
+.venus-label{
+    left: 20px;
+}
 @keyframes venus {
     from{
-        transform: rotate(0deg) translateX(100px);
+        transform: rotate(0deg) translateX(75px) rotate(0deg);
     }
     to{
-        transform: rotate(360deg) translate(100px);
+        transform: rotate(360deg) translate(75px) rotate(-360deg);
     }
 }
 
 
 .earth-outline{
-    height: 290px;
-    width: 290px;
+    height: 205px;
+    width: 205px;
 }
 .earth{
-    height: 35px;
-    width: 35px;
+    height: 25px;
+    width: 25px;
     background-color: rgb(64, 101, 211);
     animation: earth 6s linear infinite;
     border-radius: 50%;
     box-shadow: 0px 0px 10px 3px blue;
 }
 
+.earth-label{
+    left: 22px;
+    top: -4px;
+}
 
 @keyframes earth {
     from{
-        transform: rotate(0deg) translateX(145px);
+        transform: rotate(0deg) translateX(100px) rotate(0deg);
     }
     to{
-        transform: rotate(360deg) translate(145px);
+        transform: rotate(360deg) translate(100px) rotate(-360deg);
     }
 }
 
 .mars-outline{
-    height: 380px;
-    width: 380px;
+    height: 270px;
+    width: 270px;
 }
 .mars{
-    height: 32px;
-    width: 32px;
+    height: 22px;
+    width: 22px;
     background-color: #C1440E;
     animation: mars 7s linear infinite;
     border-radius: 50%;
     box-shadow: 0px 0px 10px 3px #C1440E;
     
 }
+.mars-label{
+    left: 22px;
+    top: -4px;
+}
 
 @keyframes mars {
     from{
-        transform: rotate(0deg) translateX(190px);
+        transform: rotate(0deg) translateX(135px) rotate(0deg);
     }
     to{
-        transform: rotate(360deg) translate(190px);
+        transform: rotate(360deg) translate(135px) rotate(-360deg);
     }
 }
 
 .jupitar-outline{
-    height: 500px;
-    width: 500px;
+    height: 350px;
+    width: 350px;
 }
 .jupitar{
-    height: 60px;
-    width: 60px;
+    height: 40px;
+    width: 40px;
     background-color: #A79C86;
     animation: jupitar 8s linear infinite;
     border-radius: 50%;
     box-shadow: 0px 0px 10px 3px #A79C86;
     
 }
+.jupitar-label{
+    left: 35px;
+    top: -4px;
+}
 
 @keyframes jupitar {
     from{
-        transform: rotate(0deg) translateX(246px);
+        transform: rotate(0deg) translateX(176px) rotate(0deg);
     }
     to{
-        transform: rotate(360deg) translate(246px);
+        transform: rotate(360deg) translate(176px) rotate(-360deg) ;
     }
 }
 
+
 .saturn-outline{
-    height: 620px;
-    width: 620px;
+    height: 440px;
+    width: 440px;
 }
 .saturn{
-    height: 45px;
-    width: 45px;
+    height: 30px;
+    width: 30px;
     background-color: #C5AB6E;
     animation: saturn 9s linear infinite;
     border-radius: 50%;
     box-shadow: 0px 0px 10px 3px #C5AB6E;
     
 }
+.saturn-label{
+    left: 28px;
+    top: -4px;
+}
 
 @keyframes saturn {
     from{
-        transform: rotate(0deg) translateX(310px);
+        transform: rotate(0deg) translateX(220px) rotate(0deg);
     }
     to{
-        transform: rotate(360deg) translate(310px);
+        transform: rotate(360deg) translate(220px) rotate(-360deg);
     }
 }
 
 .uranus-outline{
-    height: 690px;
-    width: 690px;
+    height: 520px;
+    width: 520px;
 }
 .uranus{
-    height: 30px;
-    width: 30px;
+    height: 28px;
+    width: 28px;
     background-color: #ACE5EE;
     animation: uranus 10s linear infinite;
     border-radius: 50%;
@@ -182,11 +247,187 @@
     
 }
 
+.uranus-label{
+    left: 24px;
+    top: -4px;
+}
+
 @keyframes uranus{
     from{
-        transform: rotate(0deg) translateX(346px);
+        transform: rotate(0deg) translateX(260px) rotate(0deg);
     }
     to{
-        transform: rotate(360deg) translate(346px);
+        transform: rotate(360deg) translate(260px) rotate(-360deg);
+    }
+}
+
+.neptune-outline{
+    height: 600px;
+    width: 600px;
+}
+
+.neptune{
+    height: 26px;
+    width: 26px;
+    background-color: #7CB7BB;
+    animation: neptune 11s linear infinite;
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px 3px #7CB7BB;
+    
+}
+.neptune-label{
+    left: 24px;
+    top: -4px;
+}
+@keyframes neptune{
+    from{
+        transform: rotate(0deg) translateX(300px) rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg) translate(300px) rotate(-360deg);
+    }
+}
+
+
+/* responsive */
+
+/* responsive for mobile devices */
+@media (max-width: 768px) {
+    .solar-system {
+        transform: scale(0.95);
+    }
+    h1{
+        margin-top: 10px;
+    }
+
+}
+
+@media (max-width: 380px) {
+     .solar-system {
+        width: 300px;
+        height: 300px;
+        transform: none;
+
+        transform: scale(0.55);
+        margin: 0 auto;
+        
+    }
+
+    h1{
+        /* font-size: 18px; */
+        margin-bottom: 50px;
+    } 
+}
+
+/* adding stars */
+ .stars {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2px;
+    height: 2px;
+    background: white;
+    border-radius: 50%;
+    box-shadow:
+        3.7vw 9.4vh 1px 1px white,
+        11.2vw 17.8vh 1px 1px white,
+        19.6vw 6.1vh 1px 1px white,
+        27.4vw 31.3vh 1px 1px white,
+        34.9vw 14.7vh 1px 1px white,
+        42.1vw 38.6vh 1px 1px white,
+        49.5vw 22.4vh 1px 1px white,
+        57.8vw 41.9vh 1px 1px white,
+        64.3vw 10.2vh 1px 1px white,
+        71.6vw 28.7vh 1px 1px white,
+        79.1vw 5.6vh 1px 1px white,
+        86.8vw 35.4vh 1px 1px white,
+        93.2vw 18.1vh 1px 1px white,
+
+        6.4vw 56.9vh 1px 1px white,
+        14.8vw 63.1vh 1px 1px white,
+        22.5vw 52.3vh 1px 1px white,
+        30.9vw 71.4vh 1px 1px white,
+        38.6vw 59.8vh 1px 1px white,
+        46.2vw 78.6vh 1px 1px white,
+        54.7vw 64.9vh 1px 1px white,
+        62.1vw 82.5vh 1px 1px white,
+        69.8vw 58.3vh 1px 1px white,
+        77.4vw 75.2vh 1px 1px white,
+        85.9vw 61.7vh 1px 1px white,
+        92.6vw 84.4vh 1px 1px white;
+     
+    animation: twinkle 1s infinite ease-in-out;
+}
+
+.stars2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2px;
+    height: 2px;
+    background: white;
+    border-radius: 50%;
+    box-shadow:
+        3.7vw 9.4vh 1px 1px white,
+        11.2vw 17.8vh 1px 1px white,
+        19.6vw 6.1vh 1px 1px white,
+        27.4vw 31.3vh 1px 1px white,
+        34.9vw 14.7vh 1px 1px white,
+        42.1vw 38.6vh 1px 1px white,
+        49.5vw 22.4vh 1px 1px white,
+        57.8vw 41.9vh 1px 1px white,
+        64.3vw 10.2vh 1px 1px white,
+        71.6vw 28.7vh 1px 1px white,
+        79.1vw 5.6vh 1px 1px white,
+        86.8vw 35.4vh 1px 1px white,
+        93.2vw 18.1vh 1px 1px white,
+
+        6.4vw 56.9vh 1px 1px white,
+        14.8vw 63.1vh 1px 1px white,
+        22.5vw 52.3vh 1px 1px white,
+        30.9vw 71.4vh 1px 1px white,
+        38.6vw 59.8vh 1px 1px white,
+        46.2vw 78.6vh 1px 1px white,
+        54.7vw 64.9vh 1px 1px white,
+        62.1vw 82.5vh 1px 1px white,
+        69.8vw 58.3vh 1px 1px white,
+        77.4vw 75.2vh 1px 1px white,
+        85.9vw 61.7vh 1px 1px white,
+        92.6vw 84.4vh 1px 1px white;
+    animation: twinkle 1.5s infinite ease-in-out;
+}
+
+.stars3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3px;
+    height: 3px;
+    background: white;
+    border-radius: 50%;
+    box-shadow:
+        7.3vw 13.6vh 1px 1px white,
+        21.8vw 9.7vh 1px 1px white,
+        36.4vw 18.2vh 1px 1px white,
+        52.1vw 6.4vh 1px 1px white,
+        68.7vw 15.3vh 1px 1px white,
+        84.9vw 11.8vh 1px 1px white,
+
+        12.6vw 72.4vh 1px 1px white,
+        29.3vw 61.9vh 1px 1px white,
+        45.8vw 78.7vh 1px 1px white,
+        61.2vw 66.5vh 1px 1px white,
+        77.9vw 83.1vh 1px 1px white;
+    animation: twinkle 1.7s infinite ease-in-out;
+}
+
+@keyframes twinkle {
+    0%, 100% {
+        opacity: 1;
+        
+    }
+    50% {
+        opacity: 0 ;
+        
     }
 }
